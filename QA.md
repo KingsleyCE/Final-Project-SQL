@@ -22,12 +22,17 @@ Check for duplicate records
 -- Chcking for duplicates in the fullVisitorId colum from all_sessions Table 
 -- SQL query:
 
+```
+
 SELECT fullvisitorid, COUNT(*)
 FROM all_sessions
 GROUP BY fullvisitorid
 HAVING COUNT (*) > 1;
 
+```
 -
+
+```
 SELECT COUNT(visitid), visitid FROM all_sessions
 GROUP BY visitid
 HAVING COUNT(visitid) > 1

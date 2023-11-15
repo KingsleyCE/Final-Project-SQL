@@ -1,3 +1,7 @@
+CREATING ALL_SESSIONS TABLE BELOW
+
+```
+
 CREATE TABLE all_sessions (
 		fullVisitorId numeric NOT NULL,
     	channelGrouping character varying(30),
@@ -33,11 +37,20 @@ CREATE TABLE all_sessions (
     	eCommerceAction_option character varying(30)
 );
 
+```
+
 --Check ALL_SESSIONS table after importing CSV file- 
+
+```
 SELECT * 
-		FROM all_sessions
+FROM all_sessions
+
+```
 			
----------------------------------------------------
+CREATING ANALYTICS TABLE BELOW
+
+```
+
 CREATE TABLE IF NOT EXISTS public.analytics
 (
     visitnumber integer,
@@ -55,11 +68,21 @@ CREATE TABLE IF NOT EXISTS public.analytics
     revenue BIGINT ,
     unit_price numeric
 );
+
+```
+
 --Check ANALYTICS table after importing CSV file- 
+
+```
 SELECT * 
-		FROM analytics
+FROM analytics
+
+```
 		
-------------------------------------------------
+CREATING PRODUCTS TABLE BELOW
+
+```
+
 CREATE TABLE products(
     	SKU character varying PRIMARY KEY,
     	name text,
@@ -69,20 +92,39 @@ CREATE TABLE products(
     	sentimentScore numeric,
     	sentimentMagnitude numeric
 );
+
+```
+
 --Check PRODUCTS table after importing CSV file- 
 
+```
 SELECT * 
-		FROM products
+FROM products
 
---------------------------------------------------
+```
+
+CREATING SALES_BY_SKU TABLE BELOW
+
+```
+
 CREATE TABLE sales_by_sku(
     	productSKU character varying(30) PRIMARY KEY,
     	total_ordered integer
 );
+
+```
+
 --Check SALES_BY_SKU table after importing CSV file- 
+
+```
 SELECT * 
-		FROM sales_by_sku
--------------------------------------------------
+FROM sales_by_sku
+
+```
+CREATING SALES_REPORT TABLE BELOW
+
+```
+
 CREATE TABLE sales_report(
     	productSKU character varying(30) PRIMARY KEY,
     	total_ordered integer,
@@ -93,6 +135,13 @@ CREATE TABLE sales_report(
     	sentimentMagnitude numeric,
     	ratio numeric
 );
---Check SSALE_PRODUCTS table after importing CSV file- 
+
+```
+
+--Check SALE_PRODUCTS table after importing CSV file- 
+
+```
 SELECT * 
-		FROM sales_products
+FROM sales_products
+
+```
